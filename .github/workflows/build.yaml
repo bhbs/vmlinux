@@ -66,6 +66,9 @@ jobs:
           scripts/config --enable CONFIG_NAMESPACES
           scripts/config --enable CONFIG_OVERLAY_FS
 
+          # Enable IP autoconfiguration support
+          scripts/config --enable CONFIG_IP_PNP
+
           make olddefconfig
 
       - name: Build kernel
